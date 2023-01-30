@@ -33,20 +33,20 @@ int Threshold = 550;            // Determine which Signal to "count as a beat", 
 
 // The SetUp Function:
 void setup() {
-  pinMode(A0, INPUT);
+  // pinMode(A0, INPUT);
   // pinMode(LED13,OUTPUT);         // pin that will blink to your heartbeat!
-  SerialBT.begin("ESP_Heeju");         // Set's up Serial Communication at certain speed.
+  // SerialBT.begin("ESP_Heeju");         // Set's up Serial Communication at certain speed.
 
 }
 
 // The Main Loop Function
 void loop() {
 
-  Signal = analogRead(PulseSensorSignalPin);  // Read the PulseSensor's value.
+  // Signal = analogRead(PulseSensorSignalPin);  // Read the PulseSensor's value.
                                               // Assign this value to the "Signal" variable.
 
-   SerialBT.println(Signal);                    // Send the Signal value to Serial Plotter.
-  //  SerialBT.println("Hello World");
+  //  SerialBT.println(Signal);                    // Send the Signal value to Serial Plotter.
+   Serial.println("Hello World");
 
 
   //  if(Signal > Threshold){                          // If the signal is above "550", then "turn-on" Arduino's on-Board LED.
